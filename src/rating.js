@@ -1,7 +1,6 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
-var Stars = require('./stars');
-require('./rating.css');
+import Stars from './stars';
 var Rating = createReactClass({
   getInitialState: function() {
      return {
@@ -9,10 +8,11 @@ var Rating = createReactClass({
       hoverIndex: this.props.value ? parseInt(this.props.value) : 0,
       weight: this.props.weight || 30,
       lockHover: this.props.readonly ? true : false,
+      color: this.props.color || 'orange'
     };
   },
   // to find the span element by looking up
-  getSpanElement(target){
+  getSpanElement: function(target){
     // bubble up untill you find the parent span element or the base node
   	while(target && target.tagName !== "SPAN")
     {
@@ -81,10 +81,10 @@ var Rating = createReactClass({
           onClick={this.onClickHandler}
           onMouseLeave={this.mouseLeaveHandler}
         >
-          <Stars hoverIndex={this.state.hoverIndex} weight={this.state.weight}/>
+          <Stars hoverIndex={this.state.hoverIndex} weight={this.state.weight} color={this.state.color}/>
         </div>
       </div>)
     }
   });
 
-  module.exports = Rating;
+  export default Rating;

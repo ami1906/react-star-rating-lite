@@ -1,13 +1,13 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
-var Star = require('./star');
+import Star from './star';
 var ratingStartIndex = 1;
 var ratingEndIndex = 5;
 var Stars = createReactClass({
   render:function(){
     var stars = [];
   	for(var i=ratingStartIndex;i<=ratingEndIndex;i++)
-  		stars.push(<Star key={i} index={i} hoverIndex={this.props.hoverIndex} weight={this.props.weight}/>)
+  		stars.push(<Star key={i} index={i} hoverIndex={this.props.hoverIndex} weight={this.props.weight} color={this.props.color}/>)
     return (
       <div>
         {stars}
@@ -16,4 +16,4 @@ var Stars = createReactClass({
   }
 });
 
-module.exports = Stars;
+export default Stars;
