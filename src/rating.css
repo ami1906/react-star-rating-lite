@@ -1,0 +1,11 @@
+.react-star-rating-lite .star{
+  padding:2px;
+}
+.react-star-rating-lite .star-filled {
+  fill:orange;
+}
+.react-star-rating-lite .star-unfilled {
+  stroke:orange;
+  stroke-width:20px;
+  fill:transparent;
+}

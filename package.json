@@ -1,0 +1,23 @@
+{
+  "name": "react-star-rating-lite",
+  "version": "1.0.0",
+  "description": "'Simple Star Rating System'",
+  "main": "src/rating.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "star",
+    "rating",
+    "react-rating",
+    "react-start-rating",
+    "star-rating",
+    "react-star-rating-lite"
+  ],
+  "author": "Amarnath Krishnan <amar.krishnan1991@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-class": "^15.6.0"
+  }
+}
