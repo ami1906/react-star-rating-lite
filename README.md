@@ -1,10 +1,6 @@
 # React Star Rating Lite
 
-React Star Rating Lite is a Star Rating component for react code which is completly based on Scalable Vector Graphics(SVG).
-
-## Demo
-
-View react-star-rating-lite in action
+React Star Rating Lite is a Star Rating component for [react](https://facebook.github.io/react/) code which is completly based on Scalable Vector Graphics([SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)).
 
 ## Installation
 
@@ -15,7 +11,7 @@ npm install --save react-star-rating-lite
 
 ### Dependencies
 
-The react-star-rating-lite component peer depends on the React and createReactClass library.
+The react-star-rating-lite component peer depends on the [React](https://facebook.github.io/react/) and [createReactClass](https://facebook.github.io/react/docs/react-without-es6.html) library.
 
 You can install React and related dependencies using npm too:
 ```
