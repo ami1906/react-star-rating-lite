@@ -5,9 +5,9 @@ require('./rating.css');
 var Rating = createReactClass({
   getInitialState: function() {
      return {
-      selectIndex: this.props.value || 0,
-      hoverIndex: this.props.value || 0,
-      weight: this.props.weight || 26,
+      selectIndex: this.props.value ? parseInt(this.props.value) : 0,
+      hoverIndex: this.props.value ? parseInt(this.props.value) : 0,
+      weight: this.props.weight || 30,
       lockHover: this.props.readonly ? true : false,
     };
   },
