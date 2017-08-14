@@ -8,7 +8,7 @@ var Star = createReactClass({
 			},
 			starUnfilled:{
 				'stroke':this.props.color,
-			  'stroke-width':'20px',
+			  'strokeWidth':'20px',
 			  'fill':'transparent'
 			}
     }
