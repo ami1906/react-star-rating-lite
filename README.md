@@ -43,6 +43,12 @@ var Rating = require('react-star-rating-lite');
 <Rating value='3' readonly/>
 ```
 
+* Set color of the star using `color` property. 
+```
+<Rating color="red"/>
+```
+Any color code can be provided. If not specified, the value will be defaulted to 'orange'.
+
 * Can increse/decrease the size of the stars using `weight` property. weight is measured in px.
 ```
 <Rating weight="24"/>
