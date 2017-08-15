@@ -15,6 +15,7 @@ module.exports = {
            {
                test: /\.js$/,
                loader: 'babel-loader',
+               exclude: /node_modules/,
                query: {
                    presets: ['react']
                }
@@ -27,6 +28,12 @@ module.exports = {
       commonjs2: 'react',
       commonjs: 'react',
       amd: 'react'
+    },
+    'create-react-class' : {
+      root: 'create-react-class',
+      commonjs2: 'create-react-class',
+      commonjs: 'create-react-class',
+      amd: 'create-react-class'
     }
   },
   plugins: [
