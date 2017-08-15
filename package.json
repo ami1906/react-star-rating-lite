@@ -1,6 +1,6 @@
 {
   "name": "react-star-rating-lite",
-  "version": "0.1.7",
+  "version": "0.0.6",
   "description": "'Simple Star Rating Module'",
   "main": "dist/rating.js",
   "scripts": {

@@ -1,6 +1,6 @@
 # React Star Rating Lite
 
-React Star Rating Lite is a Star Rating component for [react](https://facebook.github.io/react/) code which is completly based on Scalable Vector Graphics([SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)).
+React Star Rating Lite is a Star Rating component for [react](https://facebook.github.io/react/) code which is completely based on Scalable Vector Graphics([SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)).
 
 ## Installation
 
@@ -43,13 +43,13 @@ var Rating = require('react-star-rating-lite');
 <Rating value='3' readonly/>
 ```
 
-* Set color of the star using `color` property. 
+* Set color of the star using `color` property.
 ```
 <Rating color="red"/>
 ```
 Any color code can be provided. If not specified, the value will be defaulted to 'orange'.
 
-* Can increse/decrease the size of the stars using `weight` property. weight is measured in px.
+* Can increase/decrease the size of the stars using `weight` property. weight is measured in px.
 ```
 <Rating weight="24"/>
 ```
