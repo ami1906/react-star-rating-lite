@@ -1,9 +1,7 @@
 import { shallow, mount, render } from 'enzyme';
 import React from 'react';
 import Star from '../src/star.js';
-const Enzyme = require('enzyme');
-const EnzymeAdapter = require('enzyme-adapter-react-16');
-Enzyme.configure({ adapter: new EnzymeAdapter() });
+
 describe('Star Test Cases', function() {
   it('Should render the component with filled stars', function() {
     let wrapper = shallow(<Star {...{index: 3,hoverIndex: 4, weight:30, color:'orange'}}/>);
