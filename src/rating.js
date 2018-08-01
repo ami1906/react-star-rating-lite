@@ -1,27 +1,31 @@
-var React = require('react');
-var createReactClass = require('create-react-class');
+import React,{Component} from 'react';
+//var createReactClass = require('create-react-class');
 import Stars from './stars';
-var Rating = createReactClass({
-  getInitialState: function() {
-     return {
+class Rating extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
       selectIndex: this.props.value ? parseInt(this.props.value) : 0,
       hoverIndex: this.props.value ? parseInt(this.props.value) : 0,
       weight: this.props.weight || 30,
       lockHover: this.props.readonly ? true : false,
       color: this.props.color || 'orange'
-    };
-  },
+    }
+    this.mouseOverHandler = this.mouseOverHandler.bind(this);
+    this.onClickHandler = this.onClickHandler.bind(this);
+    this.mouseLeaveHandler = this.mouseLeaveHandler.bind(this);
+  }
   // to find the span element by looking up
-  getSpanElement: function(target){
+  getSpanElement(target){
     // bubble up untill you find the parent span element or the base node
   	while(target && target.tagName !== "SPAN")
     {
     	target = target.parentNode;
     }
     return target;
-  },
+  }
   // to highlight rating on hover
-	mouseOverHandler: function(e){
+	mouseOverHandler(e){
     // allow mouse hover when its allowed
   	if(!this.state.lockHover)
     {
@@ -34,9 +38,9 @@ var Rating = createReactClass({
         });
       }
     }
-  },
+  }
   // to get the index value of rating being clicked
-  getDataIndexValue: function(target){
+  getDataIndexValue(target){
     var spanIndex;
     var spanElement = this.getSpanElement(target);
     if(spanElement)
@@ -45,9 +49,9 @@ var Rating = createReactClass({
       spanIndex =  spanIndex ? parseInt(spanIndex) : spanIndex;
     }
     return spanIndex;
-  },
+  }
   // to capture user input and execute the user passed function
-  onClickHandler: function(e){
+  onClickHandler(e){
   	if(!this.props.readonly)
     {
         var ratingValue = this.getDataIndexValue(e.target);
@@ -62,29 +66,27 @@ var Rating = createReactClass({
             this.props.onClick(ratingValue);
         }
      }
-  },
+  }
   // when moving out of rating
-  mouseLeaveHandler: function(){
+  mouseLeaveHandler(){
   	if(!this.state.lockHover)
     {
       this.setState({
           hoverIndex: this.state.selectIndex
         })
      }
-  },
-
-  render: function() {
+  }
+  render(){
     return (
-      <div className="react-star-rating-lite">
+      <div className="react__star__rating__lite">
         <div
           onMouseOver={this.mouseOverHandler}
           onClick={this.onClickHandler}
-          onMouseLeave={this.mouseLeaveHandler}
-        >
+          onMouseLeave={this.mouseLeaveHandler}>
           <Stars hoverIndex={this.state.hoverIndex} weight={this.state.weight} color={this.state.color}/>
         </div>
       </div>)
     }
-  });
+}
 
-  export default Rating;
+export default Rating;

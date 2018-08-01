@@ -1,9 +1,10 @@
-var React = require('react');
-var createReactClass = require('create-react-class');
-var Star = createReactClass({
-	getInitialState: function() {
-     return {
-      starFilled:{
+import React,{Component} from 'react';
+class Star extends Component {
+	constructor(props,context)
+	{
+		super(props,context);
+		this.state = {
+			starFilled:{
 				'fill': this.props.color
 			},
 			starUnfilled:{
@@ -12,10 +13,11 @@ var Star = createReactClass({
 			  'fill':'transparent'
 			}
     }
-	},
-	render:function(){
+	}
+
+	render(){
     var styleValue = this.props.index <= this.props.hoverIndex ? this.state.starFilled : this.state.starUnfilled;
-  	return (
+		return (
       <span data-index={this.props.index} style={{'padding':'2px'}}>
         <svg id="star" viewBox="0 0 1024 1024" width={this.props.weight} >
           <title>Star</title>
@@ -24,6 +26,6 @@ var Star = createReactClass({
       </span>
     )
   }
-})
+}
 
 export default Star;
