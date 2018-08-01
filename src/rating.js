@@ -78,12 +78,11 @@ class Rating extends Component {
   }
   render(){
     return (
-      <div className="react-star-rating-lite">
+      <div className="react__star__rating__lite">
         <div
           onMouseOver={this.mouseOverHandler}
           onClick={this.onClickHandler}
-          onMouseLeave={this.mouseLeaveHandler}
-        >
+          onMouseLeave={this.mouseLeaveHandler}>
           <Stars hoverIndex={this.state.hoverIndex} weight={this.state.weight} color={this.state.color}/>
         </div>
       </div>)
