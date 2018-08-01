@@ -2,8 +2,8 @@
 
 React Star Rating Lite is a Star Rating component for [react](https://facebook.github.io/react/) code which is completely based on Scalable Vector Graphics([SVG](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)).
 
-![alt text](https://github.com/ami1906/react-star-rating-lite/blob/develop/public/unfilled.png)
-![alt text](https://github.com/ami1906/react-star-rating-lite/blob/develop/public/filled.png)
+![alt text](https://raw.githubusercontent.com/ami1906/react-star-rating-lite/develop/public/unfilled.png)
+![alt text](https://raw.githubusercontent.com/ami1906/react-star-rating-lite/develop/public/filled.png)
 
 ## Installation
 
