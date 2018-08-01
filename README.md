@@ -11,12 +11,11 @@ npm install --save react-star-rating-lite
 
 ### Dependencies
 
-The react-star-rating-lite component peer depends on the [React](https://facebook.github.io/react/) and [createReactClass](https://facebook.github.io/react/docs/react-without-es6.html) library.
+The react-star-rating-lite component peer depends on the [React](https://facebook.github.io/react/) library.
 
 You can install React and related dependencies using npm too:
 ```
 npm install --save react
-npm install --save create-react-class
 ```
 
 ## How to Use
