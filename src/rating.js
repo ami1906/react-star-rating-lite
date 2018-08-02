@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-//var createReactClass = require('create-react-class');
+import PropTypes from 'prop-types';
 import Stars from './stars';
 class Rating extends Component {
   constructor(props, context) {
@@ -7,7 +7,7 @@ class Rating extends Component {
     this.state = {
       selectIndex: this.props.value ? parseInt(this.props.value) : 0,
       hoverIndex: this.props.value ? parseInt(this.props.value) : 0,
-      weight: this.props.weight || 30,
+      weight: this.props.weight || '30',
       lockHover: this.props.readonly ? true : false,
       color: this.props.color || 'orange'
     }
@@ -89,4 +89,10 @@ class Rating extends Component {
     }
 }
 
+Rating.propTypes = {
+  value: PropTypes.string,
+  weight: PropTypes.string,
+  readonly: PropTypes.bool,
+  color: PropTypes.string
+};
 export default Rating;

@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 class Star extends Component {
 	constructor(props,context)
 	{
@@ -27,5 +28,11 @@ class Star extends Component {
     )
   }
 }
+
+Star.propTypes = {
+  hoverIndex: PropTypes.number,
+  weight: PropTypes.string,
+  color: PropTypes.string
+};
 
 export default Star;
